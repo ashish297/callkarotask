@@ -34,14 +34,14 @@ export default function ChartControls({
     return (
         <div className="flex flex-wrap items-center gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-3 dark:border-zinc-800 dark:bg-zinc-900/50">
             {/* Chart type buttons */}
-            <div className="flex items-center gap-1">
+            <div className="flex flex-wrap items-center gap-2">
                 {CHART_OPTIONS.map((opt) => (
                     <button
                         key={opt.type}
                         onClick={() => setChartType(opt.type)}
                         className={`flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-medium transition-all ${chartType === opt.type
-                                ? "bg-indigo-500 text-white shadow-sm"
-                                : "bg-white text-zinc-600 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
+                            ? "bg-indigo-500 text-white shadow-sm"
+                            : "bg-white text-zinc-600 hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700"
                             }`}
                     >
                         <span>{opt.icon}</span>
@@ -50,7 +50,7 @@ export default function ChartControls({
                 ))}
             </div>
 
-            <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-700" />
+            <div className="hidden h-6 w-px bg-zinc-200 sm:block dark:bg-zinc-700" />
 
             {/* X Axis selector */}
             <div className="flex items-center gap-2">
